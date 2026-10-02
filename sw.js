@@ -1,6 +1,6 @@
 // Guarda la app en el dispositivo para que abra rápido y funcione sin conexión.
 // Sube VERSION en cada publicación para que los dispositivos descarguen la nueva.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `profesor-nativo-${VERSION}`;
 const SHELL = [
   './',
@@ -12,7 +12,11 @@ const SHELL = [
   'js/speech.js',
   'js/placement.js',
   'js/ui.js',
+  'js/exercises.js',
+  'js/lesson.js',
+  'js/review.js',
   'content/en/placement.json',
+  'content/en/course.json',
   'icons/icon.svg',
   'icons/icon-192.png',
   'icons/icon-512.png',

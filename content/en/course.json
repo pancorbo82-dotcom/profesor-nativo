@@ -1,0 +1,13 @@
+{
+  "language": "en",
+  "speechLang": "en-US",
+  "startStage": { "Pre-A1": 1, "A1 inicial": 1, "A1": 2, "A2": 3, "B1 o superior": 4 },
+  "stages": [
+    { "id": 1, "name": "Fundamentos", "spanishPct": 80, "lessons": [
+      { "id": "s1-l01", "title": "Hello! Saludar y presentarte" }
+    ] },
+    { "id": 2, "name": "Vida diaria", "spanishPct": 60, "lessons": [] },
+    { "id": 3, "name": "Trabajo", "spanishPct": 40, "lessons": [] },
+    { "id": 4, "name": "Inmersión", "spanishPct": 20, "lessons": [] }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "id": "s1-l01",
+  "number": 1,
+  "minutes": 30,
+  "title": "Hello! Saludar y presentarte",
+  "situation": "Es tu primer día en una productora y conoces a una compañera estadounidense. Vas a saludarla, decirle quién eres y de dónde vienes.",
+  "goals": [
+    "Saludar y despedirte según la hora del día",
+    "Decir cómo te llamas y de dónde eres",
+    "Preguntar a alguien de dónde es",
+    "Usar «I am» y «you are»"
+  ],
+  "keyPhrases": [
+    { "en": "Nice to meet you.", "es": "Encantado de conocerte." },
+    { "en": "Where are you from?", "es": "¿De dónde eres?" },
+    { "en": "I'm from Spain.", "es": "Soy de España." },
+    { "en": "See you later.", "es": "Hasta luego." }
+  ],
+  "sections": [
+    {
+      "type": "story",
+      "title": "Primer día en la oficina",
+      "lines": [
+        { "speaker": "Sarah", "en": "Hi! I'm Sarah.", "es": "¡Hola! Soy Sarah." },
+        { "speaker": "Daniel", "en": "Hello, Sarah. I'm Daniel.", "es": "Hola, Sarah. Soy Daniel." },
+        { "speaker": "Sarah", "en": "Nice to meet you, Daniel.", "es": "Encantada de conocerte, Daniel." },
+        { "speaker": "Daniel", "en": "Nice to meet you too.", "es": "Encantado de conocerte también." },
+        { "speaker": "Sarah", "en": "Where are you from?", "es": "¿De dónde eres?" },
+        { "speaker": "Daniel", "en": "I'm from Spain. I'm from Madrid. And you?", "es": "Soy de España. Soy de Madrid. ¿Y tú?" },
+        { "speaker": "Sarah", "en": "I'm from New York.", "es": "Soy de Nueva York." },
+        { "speaker": "Daniel", "en": "Great! See you later, Sarah.", "es": "¡Genial! Hasta luego, Sarah." },
+        { "speaker": "Sarah", "en": "Bye, Daniel!", "es": "¡Adiós, Daniel!" }
+      ]
+    },
+    {
+      "type": "vocab",
+      "title": "Saludos y despedidas",
+      "items": [
+        { "en": "hello", "es": "hola", "example": "Hello, Sarah.", "exampleEs": "Hola, Sarah." },
+        { "en": "hi", "es": "hola (más informal)", "example": "Hi! I'm Sarah.", "exampleEs": "¡Hola! Soy Sarah.", "tip": "Es el saludo más habitual entre compañeros de trabajo." },
+        { "en": "good morning", "es": "buenos días", "example": "Good morning, everyone.", "exampleEs": "Buenos días a todos.", "tip": "Hasta las 12 del mediodía." },
+        { "en": "good afternoon", "es": "buenas tardes", "example": "Good afternoon, Mr. Brown.", "exampleEs": "Buenas tardes, señor Brown.", "tip": "De las 12 a las 6 de la tarde, más o menos." },
+        { "en": "good evening", "es": "buenas tardes o buenas noches (al llegar)", "example": "Good evening. Welcome!", "exampleEs": "Buenas noches. ¡Bienvenidos!" },
+        { "en": "good night", "es": "buenas noches (solo al despedirte)", "example": "Good night. See you tomorrow.", "exampleEs": "Buenas noches. Hasta mañana." },
+        { "en": "bye", "es": "adiós", "example": "Bye, Daniel!", "exampleEs": "¡Adiós, Daniel!" },
+        { "en": "see you later", "es": "hasta luego", "example": "See you later, Sarah.", "exampleEs": "Hasta luego, Sarah." }
+      ],
+      "memory": "«Good night» suena a irse a la cama: solo se dice al despedirse. Al llegar por la noche se dice «Good evening»."
+    },
+    {
+      "type": "vocab",
+      "title": "Presentarte",
+      "items": [
+        { "en": "I'm", "es": "yo soy (forma corta de «I am»)", "example": "I'm Daniel.", "exampleEs": "Soy Daniel." },
+        { "en": "you're", "es": "tú eres (forma corta de «you are»)", "example": "You're Sarah.", "exampleEs": "Tú eres Sarah." },
+        { "en": "from", "es": "de (procedencia)", "example": "I'm from Madrid.", "exampleEs": "Soy de Madrid." },
+        { "en": "where", "es": "dónde", "example": "Where are you from?", "exampleEs": "¿De dónde eres?" },
+        { "en": "Spain", "es": "España", "example": "I'm from Spain.", "exampleEs": "Soy de España." },
+        { "en": "nice to meet you", "es": "encantado de conocerte", "example": "Nice to meet you, Daniel.", "exampleEs": "Encantada de conocerte, Daniel.", "tip": "Si te lo dicen a ti, responde: «Nice to meet you too»." }
+      ]
+    },
+    {
+      "type": "grammar",
+      "title": "I am, you are",
+      "examples": [
+        { "en": "I'm Daniel.", "es": "Soy Daniel." },
+        { "en": "I'm from Spain.", "es": "Soy de España." },
+        { "en": "You're Sarah.", "es": "Tú eres Sarah." },
+        { "en": "Are you from New York?", "es": "¿Eres de Nueva York?" }
+      ],
+      "rule": [
+        "El verbo «to be» significa a la vez «ser» y «estar».",
+        "Con «I» (yo) se usa «am». Con «you» (tú o usted) se usa «are».",
+        "Al hablar casi siempre se contrae: «I am» pasa a «I'm» y «you are» pasa a «you're».",
+        "Para preguntar, el verbo va delante: «You are…» pasa a «Are you…?»."
+      ],
+      "spanish": "En español solemos omitir el sujeto («soy Daniel»). En inglés siempre hay que decirlo: «I'm Daniel», nunca «Am Daniel»."
+    },
+    {
+      "type": "pronunciation",
+      "id": "s1-l01-pron",
+      "title": "La «h» de «hello»",
+      "explain": [
+        "En inglés la «h» de «hello» o «hi» sí se pronuncia: es un soplido suave, como cuando empañas un cristal con el aliento.",
+        "Es mucho más suave que nuestra jota: «hello» no suena «jelou».",
+        "Y la «I» de «I'm» suena «ai»."
+      ],
+      "phrases": [
+        { "en": "Hello!", "es": "¡Hola!" },
+        { "en": "Hi, I'm Daniel.", "es": "Hola, soy Daniel." },
+        { "en": "Nice to meet you.", "es": "Encantado de conocerte." },
+        { "en": "I'm from Spain.", "es": "Soy de España." }
+      ]
+    },
+    {
+      "type": "practice",
+      "exercises": [
+        {
+          "id": "p1", "type": "choose",
+          "prompt": "Son las 9 de la mañana y llegas al rodaje. ¿Qué dices?",
+          "options": ["Good morning", "Good night", "Good evening", "Goodbye"], "optionsLang": "en",
+          "answer": "Good morning",
+          "explain": "Por la mañana se saluda con «Good morning». «Good night» solo es para despedirse."
+        },
+        {
+          "id": "p2", "type": "choose",
+          "audio": "Nice to meet you.",
+          "prompt": "¿Qué has oído?",
+          "options": ["Encantado de conocerte", "Hasta luego", "Buenos días", "¿De dónde eres?"],
+          "answer": "Encantado de conocerte",
+          "explain": "«Nice to meet you» se dice al conocer a alguien por primera vez."
+        },
+        {
+          "id": "p3", "type": "fill",
+          "sentence": "I ___ from Spain.",
+          "hint": "Yo soy de España.",
+          "answer": "am",
+          "explain": "Con «I» el verbo «to be» es «am». También puedes decir «I'm from Spain»."
+        },
+        {
+          "id": "p4", "type": "order",
+          "prompt": "Encantado de conocerte",
+          "answer": "Nice to meet you",
+          "explain": "«Nice to meet you»: literalmente, «agradable conocerte»."
+        },
+        {
+          "id": "p5", "type": "choose",
+          "prompt": "Terminas el rodaje a las 11 de la noche y te despides de un compañero. ¿Qué dices?",
+          "options": ["Good night", "Good evening", "Good morning", "Hello"], "optionsLang": "en",
+          "answer": "Good night",
+          "explain": "Al despedirte por la noche: «Good night». «Good evening» es para saludar al llegar."
+        },
+        {
+          "id": "p6", "type": "listen-write",
+          "audio": "I'm from Madrid.",
+          "hint": "Empieza con «I'm».",
+          "answer": "I'm from Madrid",
+          "accept": ["I am from Madrid", "Im from Madrid"],
+          "explain": "«I'm from…» es la forma de decir de dónde eres."
+        },
+        {
+          "id": "p7", "type": "fill",
+          "sentence": "___ you from New York?",
+          "hint": "¿Eres de Nueva York?",
+          "answer": "Are",
+          "explain": "En las preguntas el verbo va delante: «Are you…?»."
+        },
+        {
+          "id": "p8", "type": "order",
+          "prompt": "¿De dónde eres?",
+          "answer": "Where are you from?",
+          "explain": "En inglés la preposición «from» va al final de la pregunta."
+        }
+      ]
+    },
+    {
+      "type": "conversation",
+      "title": "Preséntate",
+      "scenario": "Practica con Claude: es tu primer día en una productora y conoces a una compañera de Nueva York.",
+      "roleplay": "Es mi primer día en una productora y tú eres una compañera de Nueva York. Salúdame, pregúntame cómo me llamo y de dónde soy, cuéntame algo de ti y despídete.",
+      "structures": ["Hello / Hi / Good morning", "I'm… / My name is…", "Where are you from? / I'm from…", "Nice to meet you (too)", "See you later / Bye"]
+    },
+    {
+      "type": "writing",
+      "title": "Tu presentación",
+      "prompt": "Escribe tres frases para presentarte: un saludo, tu nombre y de dónde eres.",
+      "model": "Hi! I'm Daniel. I'm from Madrid, Spain. Nice to meet you!",
+      "checklist": [
+        "Empieza con un saludo (Hello o Hi)",
+        "Usa «I'm» o «I am» con tu nombre",
+        "Usa «I'm from…» para decir de dónde eres",
+        "Escribe «I» siempre en mayúscula"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1", "type": "choose",
+      "prompt": "Son las 4 de la tarde y saludas a alguien que llega a la oficina. ¿Qué dices?",
+      "options": ["Good afternoon", "Good night", "Good morning", "Goodbye"], "optionsLang": "en",
+      "answer": "Good afternoon",
+      "explain": "De 12 a 6 de la tarde, más o menos, se dice «Good afternoon»."
+    },
+    {
+      "id": "q2", "type": "fill",
+      "sentence": "You ___ Sarah.",
+      "hint": "Tú eres Sarah.",
+      "answer": "are",
+      "explain": "Con «you» el verbo «to be» es «are»."
+    },
+    {
+      "id": "q3", "type": "choose",
+      "prompt": "¿Cómo se dice «hasta luego»?",
+      "options": ["See you later", "Nice to meet you", "Good evening", "Thank you"], "optionsLang": "en",
+      "answer": "See you later",
+      "explain": "«See you later» es literalmente «te veo luego»."
+    },
+    {
+      "id": "q4", "type": "listen-write",
+      "audio": "Nice to meet you.",
+      "answer": "Nice to meet you",
+      "explain": "La frase para cuando conoces a alguien."
+    },
+    {
+      "id": "q5", "type": "order",
+      "prompt": "Soy de España",
+      "answer": "I'm from Spain",
+      "accept": ["I am from Spain"],
+      "explain": "«I'm from» + lugar."
+    },
+    {
+      "id": "q6", "type": "choose",
+      "audio": "Where are you from?",
+      "prompt": "¿Qué te preguntan?",
+      "options": ["¿De dónde eres?", "¿Cómo te llamas?", "¿Cómo estás?", "¿Dónde estás?"],
+      "answer": "¿De dónde eres?",
+      "explain": "«Where are you from?» pregunta por tu origen. «Where are you?» sería «¿dónde estás?»."
+    },
+    {
+      "id": "q7", "type": "speak",
+      "text": "Hello, I'm from Spain.",
+      "es": "Hola, soy de España."
+    },
+    {
+      "id": "q8", "type": "choose",
+      "prompt": "I ___ Daniel.", "promptLang": "en",
+      "options": ["am", "are", "is", "be"], "optionsLang": "en",
+      "answer": "am",
+      "explain": "Con «I» siempre «am»: «I am Daniel» o «I'm Daniel»."
+    }
+  ]
+}

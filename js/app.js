@@ -2,6 +2,8 @@ import * as store from './store.js';
 import { esc, formatDate, toast } from './ui.js';
 import { canSpeak, canListen, getVoices, speak, listen } from './speech.js';
 import { loadPlacement, runPlacement, SKILL_NAMES } from './placement.js';
+import { loadLesson, runLesson } from './lesson.js';
+import { runReview, reviewCount, pendingErrors } from './review.js';
 
 const app = document.getElementById('app');
 
@@ -39,6 +41,9 @@ const routes = {
   prueba: placement,
   resultado: result,
   ajustes: settings,
+  leccion: lessonView,
+  repaso: reviewView,
+  errores: errorsView,
 };
 
 function route() {
@@ -57,7 +62,7 @@ window.addEventListener('hashchange', route);
 
 // ---------- Inicio ----------
 
-function home() {
+async function home() {
   const profile = store.getProfile();
   const tests = store.getTests();
   const day = store.planDay();
@@ -83,9 +88,12 @@ function home() {
         <div class="progress"><div style="width:${Math.round((day / 90) * 100)}%"></div></div>
         <p>Nivel de partida: <strong>${esc(first.level)}</strong> · <a href="#/resultado/0">ver resultado</a></p>
       </section>
+      <section class="card" data-today><p class="hint">Preparando tu lección…</p></section>
       <section class="card">
-        <h2>Lección de hoy</h2>
-        <p>Las lecciones llegan en la próxima versión de la app. Mientras tanto, tu plan ya ha empezado a contar desde la prueba inicial.</p>
+        <h2>Repaso de hoy</h2>
+        ${reviewCount() ? `<p>Tienes <strong>${reviewCount()}</strong> ${reviewCount() === 1 ? 'elemento' : 'elementos'} para repasar entre palabras, frases y errores.</p>
+        <a class="btn btn-primary" href="#/repaso">Repasar</a>` : '<p>Nada pendiente. El repaso se prepara solo con lo que vas aprendiendo.</p>'}
+        <p class="hint">${plural(store.masteredCount(), 'palabra dominada', 'palabras dominadas')} · <a href="#/errores">${plural(pendingErrors().length, 'error pendiente', 'errores pendientes')} en tu diario</a></p>
       </section>
       <section class="card">
         <h2>Próximas pruebas</h2>
@@ -101,6 +109,130 @@ function home() {
       </section>`}
   `;
   wireInstall();
+  if (first) renderToday(app.querySelector('[data-today]'), first);
+}
+
+function plural(n, one, many) {
+  return `${n} ${n === 1 ? one : many}`;
+}
+
+// ---------- Curso ----------
+
+let courseCache = null;
+
+async function loadCourse(language) {
+  if (courseCache?.language === language) return courseCache;
+  const res = await fetch(`content/${language}/course.json`);
+  if (!res.ok) throw new Error('No se pudo cargar el curso.');
+  courseCache = await res.json();
+  return courseCache;
+}
+
+// Lecciones en orden a partir de la etapa que marca la prueba inicial.
+function lessonPath(course, level) {
+  const start = course.startStage[level] ?? 1;
+  return course.stages.filter((st) => st.id >= start).flatMap((st) => st.lessons.map((l) => ({ ...l, stage: st })));
+}
+
+function nextLesson(course, level) {
+  return lessonPath(course, level).find((l) => !store.getLessonState(l.id));
+}
+
+async function renderToday(el, firstTest) {
+  if (!el) return;
+  const profile = store.getProfile();
+  let course;
+  try {
+    course = await loadCourse(profile.language);
+  } catch {
+    el.innerHTML = '<h2>Lección de hoy</h2><p>No se pudo cargar el curso. Comprueba la conexión.</p>';
+    return;
+  }
+  const path = lessonPath(course, firstTest.level);
+  const lesson = nextLesson(course, firstTest.level);
+  const done = path.filter((l) => store.getLessonState(l.id)).length;
+  const today = store.lessonsDoneToday();
+  if (!lesson) {
+    el.innerHTML = `
+      <h2>Lección de hoy</h2>
+      <p>${path.length ? `Has completado ${path.length === 1 ? 'la lección disponible' : `las ${path.length} lecciones disponibles`}.` : 'Las lecciones de tu etapa están en preparación.'} Las siguientes llegarán pronto; mientras tanto, haz tu repaso diario.</p>`;
+    return;
+  }
+  el.innerHTML = `
+    <p class="eyebrow">Etapa ${lesson.stage.id}: ${esc(lesson.stage.name)} · ${done} de ${path.length} lecciones</p>
+    <h2>${today ? 'Siguiente lección' : 'Lección de hoy'}</h2>
+    <p class="lead">${esc(lesson.title)}</p>
+    ${today ? '<p class="hint">Ya has hecho tu lección de hoy. Puedes seguir si te apetece, pero el repaso es más importante que correr.</p>' : ''}
+    <a class="btn btn-primary" href="#/leccion/${esc(lesson.id)}">${today ? 'Seguir' : 'Empezar'}</a>`;
+}
+
+function lessonContext(course) {
+  const profile = store.getProfile();
+  const first = store.getTests()[0];
+  const stageOf = (id) => course?.stages.find((st) => st.lessons.some((l) => l.id === id));
+  return {
+    voice: { voiceURI: profile.voiceURI, rate: profile.rate, lang: course?.speechLang || 'en-US' },
+    speechLang: course?.speechLang || 'en-US',
+    level: first?.level || 'principiante',
+    variantLabel: { 'us-uk': 'americano (avísame de las diferencias con el británico)', us: 'americano', uk: 'británico' }[profile.variant] || 'americano',
+    stageOf,
+  };
+}
+
+async function lessonView(id) {
+  const profile = store.getProfile();
+  app.innerHTML = '<p class="loading">Cargando la lección…</p>';
+  let course;
+  let lesson;
+  try {
+    course = await loadCourse(profile.language);
+    lesson = await loadLesson(profile.language, id);
+  } catch {
+    app.innerHTML = '<section class="card"><h2>No se pudo cargar la lección</h2><p>Comprueba la conexión y vuelve a intentarlo.</p><a class="btn btn-primary" href="#/">Volver</a></section>';
+    return;
+  }
+  const ctx = lessonContext(course);
+  ctx.spanishPct = ctx.stageOf(id)?.spanishPct ?? 80;
+  app.innerHTML = '<div class="lesson"></div>';
+  runLesson(app.querySelector('.lesson'), lesson, ctx, {
+    onExit: () => { location.hash = '#/'; },
+    onComplete: () => { location.hash = '#/'; },
+  });
+}
+
+async function reviewView() {
+  const profile = store.getProfile();
+  let course = null;
+  try { course = await loadCourse(profile.language); } catch { /* el repaso funciona sin el curso */ }
+  app.innerHTML = '<div class="review-run"></div>';
+  runReview(app.querySelector('.review-run'), lessonContext(course), () => { location.hash = '#/'; });
+}
+
+function errorsView() {
+  const errors = store.getErrors().slice().reverse();
+  const open = errors.filter((e) => !e.resolved);
+  const solved = errors.filter((e) => e.resolved);
+  const item = (e) => {
+    const ex = e.exercise || {};
+    return `<li>
+      <p class="q" lang="en">${esc(ex.prompt || ex.sentence || ex.text || ex.audio || '')}</p>
+      <p>Dijiste: <span class="bad">${esc(e.picked)}</span> · Correcto: <span class="good" lang="en">${esc(ex.answer || ex.text || '')}</span></p>
+      ${ex.explain ? `<p class="hint">${esc(ex.explain)}</p>` : ''}
+      <p class="hint">${esc(e.lessonTitle || '')} · ${e.count} ${e.count === 1 ? 'vez' : 'veces'}</p>
+    </li>`;
+  };
+  app.innerHTML = `
+    <header class="top">
+      <a class="icon-link" href="#/" aria-label="Volver al inicio">←</a>
+      <h1>Diario de errores</h1>
+      <span></span>
+    </header>
+    <section class="card">
+      <h2>Pendientes (${open.length})</h2>
+      <p class="hint">Vuelven en el repaso diario. Un error se supera al acertarlo dos veces seguidas.</p>
+      ${open.length ? `<ul class="review">${open.map(item).join('')}</ul>` : '<p>No tienes errores pendientes.</p>'}
+    </section>
+    ${solved.length ? `<section class="card card-quiet"><h2>Superados (${solved.length})</h2><ul class="review">${solved.map(item).join('')}</ul></section>` : ''}`;
 }
 
 // ---------- Instalación ----------

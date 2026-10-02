@@ -17,7 +17,12 @@ Es una web instalable (PWA) que funciona en iPhone, Android y ordenador. No tien
 | `js/placement.js` | Prueba de nivel por bloques (A1, A2, B1) y parte oral |
 | `js/speech.js` | Escuchar y hablar con la voz del dispositivo |
 | `js/store.js` | Perfil y resultados guardados en el dispositivo |
+| `js/lesson.js` | Lección: escucha, vocabulario, gramática, pronunciación, práctica, conversación, escritura y cuestionario |
+| `js/exercises.js` | Tipos de ejercicio: elegir, completar, ordenar, escuchar y escribir, hablar |
+| `js/review.js` | Repaso espaciado y repaso de errores |
 | `content/en/placement.json` | Preguntas de la prueba de nivel de inglés |
+| `content/en/course.json` | Etapas del plan y orden de las lecciones |
+| `content/en/lessons/*.json` | Una lección por archivo |
 
 ## Probar en local
 
