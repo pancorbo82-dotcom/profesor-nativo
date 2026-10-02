@@ -1,0 +1,252 @@
+{
+  "language": "en",
+  "speechLang": "en-US",
+  "title": "Prueba de nivel de inglés",
+  "blocks": [
+    {
+      "level": "A1",
+      "items": [
+        {
+          "id": "a1-01", "skill": "listening", "type": "listen",
+          "audio": "Good morning!",
+          "prompt": "¿Qué has oído?",
+          "options": ["Buenos días", "Buenas noches", "Adiós", "Gracias"],
+          "answer": "Buenos días",
+          "explain": "«Good morning» es el saludo de la mañana. Por la noche, al despedirte, se dice «Good night»."
+        },
+        {
+          "id": "a1-02", "skill": "vocabulary", "type": "choose",
+          "prompt": "¿Cómo se dice «gracias» en inglés?",
+          "options": ["Thank you", "Please", "Sorry", "Hello"],
+          "answer": "Thank you",
+          "explain": "«Thank you» es gracias. «Please» es por favor y «Sorry» es perdón o lo siento."
+        },
+        {
+          "id": "a1-03", "skill": "grammar", "type": "choose",
+          "prompt": "I ___ Spanish.",
+          "options": ["am", "is", "are", "be"],
+          "answer": "am",
+          "explain": "Con «I» (yo), el verbo «to be» es «am»: «I am Spanish» (soy español)."
+        },
+        {
+          "id": "a1-04", "skill": "listening", "type": "listen",
+          "audio": "My name is Carlos.",
+          "prompt": "¿Qué has oído?",
+          "options": ["Me llamo Carlos", "Soy amigo de Carlos", "Busco a Carlos", "Carlos es mi nombre favorito"],
+          "answer": "Me llamo Carlos",
+          "explain": "«My name is…» es la forma más habitual de decir cómo te llamas."
+        },
+        {
+          "id": "a1-05", "skill": "vocabulary", "type": "choose",
+          "prompt": "¿Qué número es «fifteen»?",
+          "options": ["15", "50", "5", "16"],
+          "answer": "15",
+          "explain": "«Fifteen» es 15 y «fifty» es 50. Fíjate en el final: -teen (13 a 19) frente a -ty (decenas)."
+        },
+        {
+          "id": "a1-06", "skill": "grammar", "type": "choose",
+          "prompt": "She ___ a director.",
+          "options": ["is", "are", "am", "be"],
+          "answer": "is",
+          "explain": "Con «he», «she» o «it», el verbo «to be» es «is»."
+        },
+        {
+          "id": "a1-07", "skill": "reading", "type": "read",
+          "passage": "Hi! I'm Anna. I'm from London and I work in a cinema. I love films!",
+          "prompt": "¿Dónde trabaja Anna?",
+          "options": ["En un cine", "En un hotel", "En una tienda", "En un teatro"],
+          "answer": "En un cine",
+          "explain": "«I work in a cinema» significa «trabajo en un cine». En inglés americano también se dice «movie theater»."
+        },
+        {
+          "id": "a1-08", "skill": "grammar", "type": "choose",
+          "prompt": "___ you like coffee?",
+          "options": ["Do", "Does", "Are", "Is"],
+          "answer": "Do",
+          "explain": "Las preguntas en presente se forman con «Do» (o «Does» con he/she/it): «Do you like…?»."
+        },
+        {
+          "id": "a1-09", "skill": "listening", "type": "listen",
+          "audio": "The meeting is at three o'clock.",
+          "prompt": "¿Qué has oído?",
+          "options": ["La reunión es a las tres", "La reunión es a las trece", "Hay tres reuniones", "La reunión dura tres horas"],
+          "answer": "La reunión es a las tres",
+          "explain": "«At three o'clock» es «a las tres en punto». «Meeting» es reunión."
+        },
+        {
+          "id": "a1-10", "skill": "vocabulary", "type": "choose",
+          "prompt": "¿Cuál es lo contrario de «big»?",
+          "options": ["small", "tall", "long", "old"],
+          "answer": "small",
+          "explain": "«Big» es grande y «small» es pequeño. «Tall» es alto (de estatura)."
+        }
+      ]
+    },
+    {
+      "level": "A2",
+      "items": [
+        {
+          "id": "a2-01", "skill": "grammar", "type": "choose",
+          "prompt": "Yesterday I ___ to the studio.",
+          "options": ["went", "go", "gone", "going"],
+          "answer": "went",
+          "explain": "«Yesterday» (ayer) pide pasado. El pasado de «go» es irregular: «went»."
+        },
+        {
+          "id": "a2-02", "skill": "grammar", "type": "choose",
+          "prompt": "There ___ two cameras on set.",
+          "options": ["are", "is", "be", "has"],
+          "answer": "are",
+          "explain": "«There is» es «hay» en singular y «there are» en plural. Como son dos cámaras: «there are»."
+        },
+        {
+          "id": "a2-03", "skill": "vocabulary", "type": "choose",
+          "prompt": "Can you ___ me the script, please?",
+          "options": ["pass", "say", "speak", "tell"],
+          "answer": "pass",
+          "explain": "«Pass me…» es «pásame…». «Say», «speak» y «tell» son verbos de decir o hablar."
+        },
+        {
+          "id": "a2-04", "skill": "listening", "type": "listen",
+          "audio": "We're running late, so we'll start at half past nine.",
+          "prompt": "¿Qué has oído?",
+          "options": ["Van con retraso y empezarán a las nueve y media", "Empezaron a las nueve y media en punto", "Empezarán a las nueve", "Llegarán media hora antes"],
+          "answer": "Van con retraso y empezarán a las nueve y media",
+          "explain": "«We're running late» es «vamos con retraso» y «half past nine» son las nueve y media."
+        },
+        {
+          "id": "a2-05", "skill": "grammar", "type": "choose",
+          "prompt": "This location is ___ than the last one.",
+          "options": ["bigger", "more big", "biggest", "big"],
+          "answer": "bigger",
+          "explain": "Los adjetivos cortos forman el comparativo con -er: «big» pasa a «bigger than» (más grande que)."
+        },
+        {
+          "id": "a2-06", "skill": "reading", "type": "read",
+          "passage": "Call time is 7 a.m. Please bring your ID. Lunch will be served at 1 p.m. on location.",
+          "prompt": "¿Qué tienes que llevar?",
+          "options": ["Tu documento de identidad", "La comida", "El guion", "Nada"],
+          "answer": "Tu documento de identidad",
+          "explain": "«Bring your ID» es «trae tu identificación». «Call time» es la hora de citación del equipo."
+        },
+        {
+          "id": "a2-07", "skill": "grammar", "type": "choose",
+          "prompt": "I have lived in Madrid ___ 2015.",
+          "options": ["since", "for", "from", "during"],
+          "answer": "since",
+          "explain": "«Since» marca el punto de inicio (desde 2015). «For» marca una duración: «for ten years»."
+        },
+        {
+          "id": "a2-08", "skill": "vocabulary", "type": "choose",
+          "prompt": "I'm looking ___ my keys. Have you seen them?",
+          "options": ["for", "at", "after", "to"],
+          "answer": "for",
+          "explain": "«Look for» es buscar. «Look at» es mirar y «look after» es cuidar."
+        },
+        {
+          "id": "a2-09", "skill": "listening", "type": "listen",
+          "audio": "Could you turn your phone off, please? We're about to roll.",
+          "prompt": "¿Qué has oído?",
+          "options": ["Te piden que apagues el móvil porque van a grabar", "Te piden que hagas una llamada", "Te piden que subas el volumen", "Te dicen que el rodaje ha terminado"],
+          "answer": "Te piden que apagues el móvil porque van a grabar",
+          "explain": "«Turn off» es apagar. «We're about to roll» es «estamos a punto de rodar», muy habitual en un set."
+        },
+        {
+          "id": "a2-10", "skill": "grammar", "type": "choose",
+          "prompt": "If it rains tomorrow, we ___ shoot inside.",
+          "options": ["will", "would", "did", "are"],
+          "answer": "will",
+          "explain": "Para una condición posible en el futuro: «If + presente, will + verbo» (si llueve, rodaremos dentro)."
+        }
+      ]
+    },
+    {
+      "level": "B1",
+      "items": [
+        {
+          "id": "b1-01", "skill": "grammar", "type": "choose",
+          "prompt": "By the time we arrived, the crew ___ already left.",
+          "options": ["had", "have", "has", "was"],
+          "answer": "had",
+          "explain": "Una acción anterior a otra pasada usa el pluscuamperfecto: «had left» (ya se había ido)."
+        },
+        {
+          "id": "b1-02", "skill": "grammar", "type": "choose",
+          "prompt": "The scene ___ in Seville last year.",
+          "options": ["was shot", "shot", "is shooting", "has shot"],
+          "answer": "was shot",
+          "explain": "La escena no rueda: la ruedan. Es pasiva en pasado: «was shot» (se rodó)."
+        },
+        {
+          "id": "b1-03", "skill": "vocabulary", "type": "choose",
+          "prompt": "We need to ___ the meeting until next week.",
+          "options": ["postpone", "prevent", "pretend", "propose"],
+          "answer": "postpone",
+          "explain": "«Postpone» es aplazar. Ojo: «pretend» significa fingir, no pretender."
+        },
+        {
+          "id": "b1-04", "skill": "reading", "type": "read",
+          "passage": "Due to the weather forecast, tomorrow's exterior scenes have been moved to Thursday. The unit will shoot the interior scenes at the studio instead. Updated call sheets will be sent tonight.",
+          "prompt": "¿Qué pasará mañana?",
+          "options": ["Se rodarán los interiores en el estudio", "Se rodarán los exteriores", "No habrá rodaje", "Se repetirán las escenas del jueves"],
+          "answer": "Se rodarán los interiores en el estudio",
+          "explain": "Los exteriores pasan al jueves y «instead» (en su lugar) se ruedan los interiores en el estudio."
+        },
+        {
+          "id": "b1-05", "skill": "grammar", "type": "choose",
+          "prompt": "I wish I ___ more time to practise.",
+          "options": ["had", "have", "will have", "having"],
+          "answer": "had",
+          "explain": "«I wish» + pasado expresa un deseo sobre el presente: «ojalá tuviera más tiempo»."
+        },
+        {
+          "id": "b1-06", "skill": "listening", "type": "listen",
+          "audio": "I'd rather we didn't go over budget, so let's cut the night shoot.",
+          "prompt": "¿Qué has oído?",
+          "options": ["Prefiere no pasarse del presupuesto y quitar el rodaje nocturno", "Quiere añadir un rodaje nocturno", "Ya se han pasado del presupuesto", "Quiere rodar de noche para ahorrar"],
+          "answer": "Prefiere no pasarse del presupuesto y quitar el rodaje nocturno",
+          "explain": "«I'd rather…» es «prefiero que…», «go over budget» es pasarse del presupuesto y «cut» es quitar."
+        },
+        {
+          "id": "b1-07", "skill": "grammar", "type": "choose",
+          "prompt": "She asked me where ___.",
+          "options": ["I was going", "was I going", "am I going", "I am go"],
+          "answer": "I was going",
+          "explain": "En las preguntas indirectas no se invierte el orden: «where I was going», no «where was I going»."
+        },
+        {
+          "id": "b1-08", "skill": "vocabulary", "type": "choose",
+          "prompt": "I'm afraid I can't ___ to that date.",
+          "options": ["commit", "compromise", "promise", "assure"],
+          "answer": "commit",
+          "explain": "«Commit to» es comprometerse a algo. «Compromise» es un falso amigo: significa llegar a un acuerdo cediendo."
+        },
+        {
+          "id": "b1-09", "skill": "vocabulary", "type": "choose",
+          "prompt": "The director was very ___ with the result, so she wanted to reshoot everything.",
+          "options": ["disappointed", "embarrassed", "excited", "deceived"],
+          "answer": "disappointed",
+          "explain": "«Disappointed» es decepcionado. «Embarrassed» es avergonzado (nunca embarazada) y «deceived» es engañado."
+        },
+        {
+          "id": "b1-10", "skill": "reading", "type": "read",
+          "passage": "Although the budget was tight, the producer managed to secure additional funding from a regional film commission, which allowed the team to extend the shoot by a week.",
+          "prompt": "¿Qué permitió alargar el rodaje?",
+          "options": ["Financiación extra de una comisión fílmica regional", "Un presupuesto inicial amplio", "Recortar una semana de preparación", "Un préstamo personal del productor"],
+          "answer": "Financiación extra de una comisión fílmica regional",
+          "explain": "«Secure additional funding» es conseguir financiación adicional. «Tight budget» es un presupuesto ajustado."
+        }
+      ]
+    }
+  ],
+  "speaking": [
+    { "id": "sp-01", "level": "A1", "text": "Nice to meet you." },
+    { "id": "sp-02", "level": "A1", "text": "I work in film production." },
+    { "id": "sp-03", "level": "A2", "text": "Could you send me the call sheet, please?" }
+  ],
+  "external": [
+    { "name": "Prueba rápida de Cambridge English", "url": "https://www.cambridgeenglish.org/es/test-your-english/index.aspx" },
+    { "name": "Prueba de EF", "url": "https://www.ef.com.es/test/english/" },
+    { "name": "Prueba de Inglés sin Pijadas", "url": "https://inglessinpijadas.com/" }
+  ]
+}

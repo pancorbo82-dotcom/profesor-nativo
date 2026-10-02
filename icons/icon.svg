@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#1f3a5f"/>
+  <path d="M112 176h288v192a32 32 0 0 1-32 32H232l-72 56v-56h-16a32 32 0 0 1-32-32z" fill="#f6f4ef"/>
+  <path d="M112 112h288v48H112z" fill="#e8a33d"/>
+  <path d="M160 112l-32 48M224 112l-32 48M288 112l-32 48M352 112l-32 48" stroke="#1f3a5f" stroke-width="18"/>
+  <text x="256" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="120" fill="#1f3a5f">EN</text>
+</svg>
